@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+
+  resources :ponds
+  resources :tadpoles
+  resources :frogs
+
+  get '/frogs/:id/tadpoles/new' => 'tadpoles#new'
+
+  resource :tadpoles do
+    get ':id/evolve' => 'tadpoles#evolve', :as => 'evolve'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

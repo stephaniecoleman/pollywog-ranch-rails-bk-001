@@ -1,0 +1,11 @@
+<%= form_for(@frog) do |f|%>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :color %>
+  <%= f.text_field :color %><br>
+
+  Choose your pond, besh!<br>
+  <%= f.collection_select(:pond_id, Pond.all, :id, :name) %><br>
+  <%= f.submit %>
+<% end %>
