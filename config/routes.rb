@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :tadpoles
   resources :frogs
 
-  get '/frogs/:id/tadpoles/new' => 'tadpoles#new'
+  # get '/frogs/:id/tadpoles/new' => 'tadpoles#new'
 
   resource :tadpoles do
     get ':id/evolve' => 'tadpoles#evolve', :as => 'evolve'

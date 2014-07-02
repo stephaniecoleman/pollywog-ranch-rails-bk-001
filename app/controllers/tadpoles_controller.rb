@@ -6,7 +6,7 @@ class TadpolesController < ApplicationController
   end
 
   def new
-    @frog = Frog.find(params[:id])
+    # @frog = Frog.find(params[:id])
     @tadpole = Tadpole.new
   end
 

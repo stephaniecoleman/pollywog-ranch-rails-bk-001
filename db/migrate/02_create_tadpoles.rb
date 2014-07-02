@@ -4,6 +4,7 @@ class CreateTadpoles < ActiveRecord::Migration
       t.string :name
       t.string :color
       t.integer :frog_id
+      t.integer :pond_id
       t.timestamps
     end
   end

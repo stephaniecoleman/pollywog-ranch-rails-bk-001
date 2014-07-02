@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 3) do
     t.string   "name"
     t.string   "color"
     t.integer  "frog_id"
+    t.integer  "pond_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

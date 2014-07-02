@@ -39,15 +39,21 @@ namespace :db do
       :color => 'Brown',
       :pond => Pond.find_by(:name => 'Greenwood'))
 
-    f3 = Frog.create(
+    f4 = Frog.create(
       :name => 'Alice',
       :color => 'Blue',
       :pond => Pond.find_by(:name => 'Sunny Meadow'))
 
-    f4 = Frog.create(
+    f5 = Frog.create(
       :name => 'Dilbert',
       :color => 'Yellow',
       :pond => Pond.find_by(:name => 'Silver Frost'))
+
+    f6 = Frog.create(
+      :name => 'Johnny',
+      :color => 'Black',
+      :pond => Pond.find_by(:name => 'Greenwood'))
+
 
     # create tadpoles
 

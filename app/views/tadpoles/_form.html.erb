@@ -1,7 +1,28 @@
+
+
+
 <%= form_for(@tadpole) do |f|%>
-  <%= f.label :name %>
-  <%= f.text_field :name %><br>
-  <%= f.hidden_field :color, :value => @frog.color %>
-  <%= f.hidden_field :frog_id, :value => @frog.id %>
-  <%= f.submit %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pond_id %>
+    <%= f.collection_select :pond_id, Pond.order(:name), :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :frog_id %>
+    <%= f.grouped_collection_select :frog_id, Pond.order(:name), :frogs, :name, :id, :name %>
+  </div>
+
+  <div class ="actions">
+    <%= f.submit %>
+  </div>
 <% end %>
